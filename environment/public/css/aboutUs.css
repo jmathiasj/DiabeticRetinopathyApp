@@ -1,0 +1,190 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+
+body, html {
+
+    height: 100%;
+
+    color: #777;
+
+    line-height: 1.8;
+
+}
+
+
+
+/* Create a Parallax Effect */
+
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-5, .bgimg-6, .bgimg-7 {
+
+    background-attachment: fixed;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+}
+
+
+
+/* First image (Logo. Full height) */
+
+/*#home {*/
+
+    
+    
+/*    background-image: url('https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/articles/health_tools/common_eye_conditions_slideshow/getty_rm_photo_of_close_up_of_eye.jpg');*/
+
+/*    min-height: 100%;*/
+
+/*}*/
+
+
+
+/* Second image (Portfolio) */
+
+.bgimg-2 {
+
+    background-image: url("https://www.sightsaversindia.in/wp-content/uploads/2019/02/Exercises-for-Proper-Eye-Care-750x390.jpg");
+
+    min-height: 400px;
+
+}
+
+
+
+
+/*teamcards*/
+
+.card {
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  max-width: 500px;
+  margin:auto;
+
+  text-align: center;
+
+  font-family: arial;
+
+  display: inline-block;
+
+
+}
+
+#merl, #sim {
+  margin-left: 100px;
+}
+
+.portfolio{
+  margin: auto;
+}
+
+.title {
+
+  color: grey;
+
+  font-size: 18px;
+
+}
+
+#team{
+  text-align: center;
+}
+
+button {
+
+  border: none;
+
+  outline: 0;
+
+  display: inline-block;
+
+  padding: 8px;
+
+  color: white;
+
+  background-color: #000;
+
+  text-align: center;
+
+  cursor: pointer;
+
+  width: 100%;
+
+  font-size: 18px;
+
+}
+
+
+
+a {
+
+  text-decoration: none;
+
+  font-size: 22px;
+
+  color: black;
+
+}
+
+
+
+/* Third image (Contact) */
+
+.bgimg-3 {
+
+    background-image: url("https://res-5.cloudinary.com/sharecare/image/upload/c_fill,f_auto,h_340,w_600/v1485548960/articles/types-of-eye-doctors");
+
+    min-height: 400px;
+
+    
+
+}
+
+.bgimg-1{
+
+    background-image: url("https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/articles/health_tools/common_eye_conditions_slideshow/getty_rm_photo_of_close_up_of_eye.jpg");
+
+    min-height: 400px;
+
+    
+
+}
+
+.bgimg-5{
+
+    background-image: url("https://www.marketingtochina.com/wp-content/uploads/2017/02/eyes-center-1.jpg");
+
+    min-height: 400px;
+
+    
+
+}
+.bgimg-6{
+
+    background-image: url("https://media.gettyimages.com/photos/eye-check-up-picture-id820733530?s=612x612");
+
+    min-height: 400px;
+
+    
+
+}
+
+.bgimg-7{
+
+    background-image: url("https://static.wixstatic.com/media/b77d07_4d67dd0f194240b380bb35a904bf016c~mv2.jpg");
+
+    min-height: 400px;
+
+    
+
+}
+
+.w3-wide {letter-spacing: 10px;}
+
+.w3-hover-opacity {cursor: pointer;}
+
+
+

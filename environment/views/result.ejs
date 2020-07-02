@@ -1,0 +1,53 @@
+<html>
+    <head>
+      
+      <script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	exportEnabled: true,
+	theme: "light1", // "light1", "light2", "dark1", "dark2"
+	title:
+		text: "Your Addiction Level Chart"
+	},
+	data: [{
+		type: "column", //change type to bar, line, area, pie, etc
+		//indexLabel: "{y}", //Shows y value on all Data Points
+		indexLabelFontColor: "#5A5757",
+		indexLabelPlacement: "outside",
+		dataPoints: [
+			{ x: 10, y: 20  ,indexLabel: "Alcohol"},
+			{ x: 20, y: 30 ,indexLabel: "Marijuana"},
+			{ x: 30, y: 40 ,indexLabel: "Heroin"},
+			{ x: 40, y: 50 ,indexLabel: "Cocaine"},
+			{ x: 50, y: 70, indexLabel: "Ecstasy" }
+	
+		]
+	}]
+});
+chart.render();
+
+}
+</script>
+      
+    </head>
+
+<body>
+
+
+
+<h3>Results!!</h3>
+<h4>Your level of Alcohol Addiction is:<%= resScore.quiz1 %>%</h4><br>
+<h4>Your level of Marijuana Addiction is:<%= resScore.quiz2 %>%</h4><br>
+<h4>Your level of Heroin Addiction is:<%= resScore.quiz3 %>%</h4><br>
+<h4>Your level of Cocaine Addiction is:<%= resScore.quiz4 %>%</h4><br>
+<h4>Your level of Ecstasy Addiction is:<%= resScore.quiz5 %>%</h4><br>
+
+
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+</body>
+    
+</html>

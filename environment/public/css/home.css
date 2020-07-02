@@ -1,0 +1,125 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+
+    height: 100%;
+
+    line-height: 1.8;
+
+}
+
+
+
+/* Full height image header */
+
+.bgimg-4 {
+
+    background-position: center;
+
+    background-size: cover;
+
+    background-image: url("https://image.shutterstock.com/image-photo/hi-tech-biometric-retina-security-260nw-663722314.jpg");
+
+    min-height: 100%;
+
+}
+
+
+.w3-bar .w3-button {
+
+    padding: 16px;
+    
+
+}
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+#logs
+
+{
+
+	display: inline-block;
+
+
+}
+
+/* Add Animation */
+
+@-webkit-keyframes animatetop {
+
+    from {top:-300px; opacity:0} 
+
+    to {top:0; opacity:1}
+
+}
+
+
+
+@keyframes animatetop {
+
+    from {top:-300px; opacity:0}
+
+    to {top:0; opacity:1}
+
+}
+
+
+
+/* The Close Button */
+
+.close {
+
+    color: white;
+
+    float: right;
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+}
+
+
+
+
+
+.close:focus {
+
+    color: #000;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+}
+
+

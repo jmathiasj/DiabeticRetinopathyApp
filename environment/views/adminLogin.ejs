@@ -1,0 +1,63 @@
+<% include partials/header %>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Admin Login</title>
+
+
+<link rel="stylesheet" href="css/login.css">
+
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/486EF24B-BDC7-4645-AD7E-12D23473474B/main.js" charset="UTF-8"></script></head>
+
+
+  <center><h1>Admin Login</h1></center>
+
+
+
+<form method="POST" action="/adminlogin">
+
+  <div class="imgcontainer">
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRViibnOyHWzEX4eT4zp1aVVxTeZXXr0ELNnFPkgTkp7oBjVltC"   alt="Avatar" class="avatar">
+
+  </div>
+
+
+
+  <div class="container" style="border:2">
+
+    <label for="uname"><b>Username</b></label>
+
+    <input type="text" placeholder="Enter Username" name="username" required><br>
+
+
+
+
+
+
+
+    <label for="psw"><b>Password</b></label>
+
+    <input type="password" placeholder="Enter Password" name="password" required>
+
+
+
+    <button type="submit">Login as Admin</button>
+
+    
+
+  </div>
+
+
+
+  <div class="container" >
+
+    <a href="/#"><button type="button" class="cancelbtn">Back to Home</button>
+
+  </div>
+
+</form>
+
+
+
+<% include partials/footer %>

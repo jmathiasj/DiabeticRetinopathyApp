@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html>
+<title>RetinoDoc</title>
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+
+<script type="text/javascript" src='https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.3.min.js'></script>
+<script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js'></script>
+<link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css'
+    media="screen" />
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box}
+
+/* Full-width input fields */
+input[type=text], input[type=password], input[type=email], input[type=number] {
+  width: 70%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=number]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  /*border: 1px solid #f1f1f1;*/
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: black;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: center;
+  width: 25%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+  background-image: url('https://img.freepik.com/free-vector/healthcare-medical-science-background-with-icons-symbols-innovation-technology_120542-239.jpg?size=626&ext=jpg'); /* Just to visualize the extent 
+}
+</style>
+<body>
+<div class="fullscreen">
+<form method="post" action="/signIn" id="form1" style="border:1px solid #ccc">
+<center>
+  <div class="container">
+   <h1 class="form-signin-heading"><i class="fa fa-user-plus" style="font-size:36px"></i><b>
+              Sign Up  </b></h1>
+    <p><b>Please fill in this form to create an account.</b></p>
+<hr>    
+<input name="name" type="text" id="txtUsername" placeholder="Enter Name"
+                required />
+<input name="username" type="text" id="txtUsername" placeholder="Enter Username"
+            required />   
+<input name="password" type="password" id="txtPassword" title="Password must contain: Minimum 8 characters atleast 1 Alphabet and 1 Number"
+            placeholder="Enter Password" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" />
+       
+        <input name="txtConfirmPassword" type="password" id="txtConfirmPassword" placeholder="Confirm Password" />
+        <br />
+         <input name="email" type="email" id="txtEmail" placeholder="Enter Email"
+            required  /><br>
+          <input name="number" type="number" id="number" placeholder="Enter Phone No."
+                required />
+
+    
+
+
+    <div class="clearfix">
+     <button type="submit" class="signupbtn" type="submit" name="btnSignup" value="Sign up" id="btnSignup"><i class="fa fa-plus-square" style="font-size:15px"></i> Sign Up</button>
+    <a href="/#"><button type="button" class="cancelbtn"><i class="fa fa-home"></i> Home</button></a>
+     
+    </div>
+  </div>
+  </center>
+</form>
+</div>
+  <script type="text/javascript">
+        window.onload = function () {
+            var txtPassword = document.getElementById("txtPassword");
+            var txtConfirmPassword = document.getElementById("txtConfirmPassword");
+            txtPassword.onchange = ConfirmPassword;
+            txtConfirmPassword.onkeyup = ConfirmPassword;
+            function ConfirmPassword() {
+                txtConfirmPassword.setCustomValidity("");
+                if (txtPassword.value != txtConfirmPassword.value) {
+                    txtConfirmPassword.setCustomValidity("Passwords do not match.");
+                }
+            }
+        }
+    
+    </script>
+</body>
+</html>

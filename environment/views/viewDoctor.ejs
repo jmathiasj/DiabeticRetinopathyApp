@@ -1,0 +1,63 @@
+<% include partials/header %>
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<style type="text/css">
+    .bg-cover {
+        background-image : url('https://image.freepik.com/free-photo/doctor-s-stethoscope-with-blue-background_23-2147652363.jpg');
+        background-repeat: no-repeat;
+        background-size  : 100% ; 
+    }
+</style>
+
+</head>
+    <body>
+   
+  
+ <div class="container" id="home">
+     <header>
+         <div class="container">
+             <br><br>
+             <div class="jumbotron jumotron bg-cover" style="box-shadow : 0 0 12px grey">
+                 <h1>Welcome to Online Counselling!</h1>
+                     <p>Contact Doctors</p>
+             </div>
+             
+         
+         </div>
+     </header>
+     
+     <div class="row text-center" style="display:flex; flex-wrap: wrap; ">
+      
+             
+        
+        <% doctor.forEach(function(doc){ %>
+            <div class="col-md-3 col-sm-6" id="width" style="margin:30px; padding:15px;">
+                <div class="thumbnail" align="center" style="border:solid;left-margin:10px ;padding:10px; box-shadow: 0 0 9px black; ">
+                  <div class="caption" style="background-color:black;color:#94969c;border-radius : 4px;">
+                   
+                   <!--<div class="container" style="margin:auto;padding-top:30px">-->
+                   <br>
+                   <img src="<%= doc.image %>"  style="border-radius:4px" width="170" height="170">
+                   <!--</div>-->
+                   <div style="text-align:justify; padding-left:10px; ">
+                   <p><br>
+                       <h5>Name : <%= doc.name %></h5>
+                       <h5>Qualification : <%= doc.Qualification%></h5>
+                       <h5>Specialization : <%= doc.Specilaization%></h5>
+                   </p>
+                   <p> </div>
+                        <br>
+                       <a href="/viewdoctor/<%= doc._id %>"  class="btn btn-primary">More Info</a>
+                      
+                   </p>
+                  
+                   </div>
+                </div>
+            </div>
+        <% }); %>
+     
+    </div>
+</div>
+
+<% include partials/footer %>
+

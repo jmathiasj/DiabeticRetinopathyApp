@@ -1,0 +1,71 @@
+.container {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 400px;
+
+    max-height: 500px;
+
+    padding: 0 10px;
+
+}
+
+/*button on image*/
+
+ .btn {
+
+  border: none;
+
+  outline: 0;
+
+  display: inline-block;
+
+  padding: 8px;
+
+  color: white;
+
+  background-color: #000;
+
+  text-align: center;
+
+  cursor: pointer;
+
+  width: 100%;
+
+  font-size: 18px;
+
+}
+
+
+
+.btn:hover {
+
+    background-color: black;
+
+    opacity: 0.7;
+
+}
+
+
+
+/*footer*/
+
+.footer {
+
+    /*position: ;*/
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 100%;
+
+    background-color:lightgrey;
+
+    color: black;
+
+    text-align: center;
+
+}

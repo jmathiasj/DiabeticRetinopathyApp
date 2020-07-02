@@ -1,0 +1,200 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+     
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <style>
+
+div.des{
+margin-top: 30px;
+margin-bottom: 30px;
+text-align: left;
+padding-left : 50px;
+
+
+
+
+}
+div.well{
+  margin-left:152px;
+  margin-right:30px;
+  margin-top: 20px;
+}
+
+img.img-responsive{
+    
+    border-radius : 5px;
+   
+}
+
+
+      </style>
+    <!--<link rel="stylesheet" type="text/css" href="../css/show.css">-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">-->
+
+<!--<link rel="stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!--<link rel="stylesheet" href="css/aboutUs.css">-->
+<!--<link rel="stylesheet" href="css/home.css">-->
+
+<!--userprofile.ejs-->
+<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+
+<!--<link rel="stylesheet" href="css/login.css">-->
+<!--<link rel="stylesheet" href="css/userprofile.css">-->
+<!--<link rel="stylesheet" href="/css/sidebar.css" type="text/css">-->
+<!--<script type="text/javascript" src="/js/sidebar.js" ></script>-->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.11.7"></script>
+<!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">-->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+
+<body style="background-image: url('https://cdn.shopify.com/s/files/1/2930/2308/products/snow-white-marble-floor-with-black-line-texture-old-master-photography-backdrop_1024x1024.jpg?v=1535712483'); ">
+<div class="w3-top">
+
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <button id="openNav" style="width:5%;display:none;" class="w3-bar-item w3-button w3-black w3-xlarge" onclick="w3_open()">&#9776;</button>
+    <a href="/" class="w3-bar-item w3-button w3-wide"style="height:56px;"><img src="../images/favicon.ico" class="ico" style="width:30px;height:40px;"></span><strong> RetinoDoc</strong></a>
+    
+    <div class="w3-right w3-hide-small">
+        
+            <div class="w3-dropdown-hover">
+                <a href="#" class="w3-button w3-white"style="height:56px;"><span class="glyphicon glyphicon-th"></span> Menu </a>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="/addict" class="w3-bar-item w3-button"style="height:56px;">Symptoms and Causes</a>
+                    <!--<a href="/treatment" class="w3-bar-item w3-button">Treatment</a>-->
+                    <a href="/aboutUs" class="w3-bar-item w3-button"style="height:56px;">About Us</a>
+                    <% if (!currentUser) { %>   
+                    <a href="/login" class="w3-bar-item w3-button"style="height:56px;">Login for profile</a>
+            
+                     <% } else { %>
+                    <a href="/home/<%= currentUser.id %>" class="w3-bar-item w3-button"style="height:56px;">View Profile of <%= currentUser.username %> </a>
+             
+                    <% } %>
+                    
+                </div>
+            </div>
+            <% if (!currentUser) { %>   
+                <a href="/login" class="w3-bar-item w3-button"style="height:56px;"> Login</a>
+            
+                <a href="/signIn" class="w3-bar-item w3-button"style="height:56px;"><i class="fa fa-user"></i> Sign Up</a>
+            <% } else { %>
+                <a href="#" class="w3-bar-item w3-button"style="height:56px;"><i style='font-size:24px' class='fas'>&#xf2bd;</i> Logged In As <%= currentUser.username %> </a>
+                <a href="/logout" class="w3-bar-item w3-button"style="height:56px;"><span class="glyphicon glyphicon-off"></span> Logout </a>
+            <% } %>
+    </div>
+
+  </div>
+</div>
+
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none; opacity:0.3;" id="mySidebar">
+            <div class="w3-dropdown-hover">
+                <button class="w3-button">MENU</button>
+               <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                   <a href="/addict" class="w3-bar-item w3-button">ADDICTION</a>
+                    <!--<a href="/treatment" class="w3-bar-item w3-button">TREATMENT</a>-->
+                    <a href="/aboutUs" class="w3-bar-item w3-button">ABOUT US</a>
+                    <a href="/#contact" class="w3-bar-item w3-button">CONTACT US</a>
+                </div>
+            </div>  
+    <% if (!currentUser) { %>   
+         <a href="/login" onclick="w3_close()" class="w3-bar-item w3-button">LOGIN</a>
+
+        <a href="/signIn" onclick="w3_close()" class="w3-bar-item w3-button">SIGN UP</a>
+    <% } else { %>
+        <a href="#" class="w3-bar-item w3-button"> Logged In As <%= currentUser.username %> </a>
+        <a href="/logout" class="w3-bar-item w3-button"> LOGOUT</a>
+    <% } %>
+</nav>
+
+    <!--<div class="col-md-12">-->
+
+
+
+
+
+
+<div style="margin-top : 40px;" >
+    
+<table>
+    
+<tr> 
+
+<td>
+<div class="container"style="background-color:black; margin-top : 40px; margin-left : 40px; color:#6d83bd; border-radius : 12px; width:400px;  box-shadow:  0 0 10px black">
+    
+<div style="padding-top:40px;">
+    <center>
+         <img class="img-responsive" width="200" height="250" src="<%= doctor.image %>">
+    </center>
+   
+</div>
+
+<div class="des" >
+                    <h4>Name: <%=doctor.name%></h4> <br>
+                    <h4>Qualification: <%=doctor.Qualification%></h4><br>
+                    <h4>Specialization : <%=doctor.Specilaization%></h4><br><br>
+                    <span class="skype-button rounded" data-contact-id="<%= doctor.Skypeid %>" data-text="Call Doctor"></span>
+                     <script src="https://swc.cdn.skype.com/sdk/v1/sdk.min.js"></script>
+                   </div>
+       </td>
+       
+       
+       <th>
+           <div class="well" style="width:500px; background-color:#d3d5db; box-shadow:  0 0 10px grey">
+        <div class="text-right">
+            <a class="btn btn-success" href="/viewDoctor/<%= doctor._id %>/comments/new" style="color:white">Add New Comment</a> <br><br>
+        </div>
+        <br><br>
+        <% doctor.comments.forEach(function(comment){ %>
+            <div class="row" >
+                <div class="col-md-12 " >
+                    <strong><%= comment.author.username %></strong>
+                    <br>
+                    <span class="pull-right"></span>
+                    
+                    <div>
+                        <%= comment.text %>
+                           <%if(currentUser._id && comment.author.id.equals(currentUser._id)){%>
+                                    <form style="display: inline" class="pull-right" action="/viewdoctor/<%=doctor._id%>/comments/<%=comment._id%>?_method=DELETE" method="POST">
+                                        <button class="btn btn-xs btn-danger">DELETE</button>
+                                        <a href="/viewdoctor/<%=doctor._id%>/comments/<%=comment._id%>/edit" style="color : white"><button class="btn btn-xs btn-danger" >EDIT</a></button>
+                                    </form>
+                           <% } %>
+                    </div>
+                    <br><br>
+                </div>
+            </div>
+
+        <% }) %>
+</div>
+       </th>
+
+</tr>
+
+
+</div>
+
+
+   
+
+
+</table>
+
+    <a href ="/viewdoctor"><button class="btn btn-primary" style="margin-left:175px;margin-top : 50px; background-color : black">Back to Profile</button></a>
+    </div>
+
+
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<<% include partials/header %>
+
+
+<header class="bgimg-2 w3-display-container w3-grayscale-min" id="home" style="opacity:0.7">
+ <div class="container">
+     <!--<header class="jumbotron">-->
+         <div class="container">
+             <br>
+             <h1 style="padding-left:30px; padding-right:30px;padding-top:30px; color: black;"><strong>Our Retinopathy Testing Centres</strong></h1>
+         </div>
+     <!--</header>-->
+
+     <!--Search Button-->
+     
+     
+     <p>
+         <form action="/viewRehab" method="GET" class="form-inline">
+             <div class="form-group" style="margin-left:700px;margin-right:20px;">
+                 <div class="col">
+                 <input type="text" style="border-radius:25px; height:30px;width:200px"name="search" placeholder="Enter Location" class="form-control">
+                </div>
+                <div class="input-bar-item">
+                 <button style="border-radius:25px ; padding: 12px 16px"> <i class="fa fa-search" aria-hidden="true"> </i> </button>
+                 </div>
+                 <!--<form class="example" action="/action_page.php">-->
+
+                   <!--<input type="text" placeholder="Search.." name="search">-->
+                   <!--<button type="submit"><i class="fa fa-search"></i></button>-->
+             </div>
+         </form>
+     </p>
+     
+     
+     
+     <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+         <div class="col-md-12">
+             <% if(noMatch != undefined) { %>
+                 <h3 style="margin-left:500px;"><%= noMatch %></h3>
+             <% } %>
+         </div> 
+        <% rehab.forEach(function(rehab){ %>
+            <div class="col-md-3 col-sm-6" id="width" style="margin-left:30px;margin-right:30px;margin-bottom:30px;" >
+                <div class="thumbnail" align="center" style="padding-top:20px;border-radius: 25px; margin:auto;background-color: black;opacity:0.9">
+                  <div class="caption">
+                   
+                   <!--<div class="container" style="border:solid;">-->
+                   <img src="<%= rehab.image %>"  style="border-radius: 25px;margin:auto;opacity:1;" width="200" height="200">
+                   <!--</div>-->
+                   <p>
+                       <h4 style="opacity:1; color:white">Name:<%= rehab.Name %></h4>
+                       <h5 style="opacity:1; color:white">Location:<%= rehab.Location%></h5>
+                       <h5 style="opacity:1;color:white">Contact:<%= rehab.Contact%></h5>
+                   </p>
+                   </div>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</div>
+</header>
+
+<<% include partials/footer %>

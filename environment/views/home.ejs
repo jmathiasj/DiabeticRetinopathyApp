@@ -1,0 +1,586 @@
+
+
+
+<% include partials/header %>
+
+
+
+
+
+
+<!-- Header with full-height image -->
+
+<header class="bgimg-4 w3-display-container w3-grayscale-min" id="home">
+
+  <div class="w3-display-left w3-text-white" style="padding:48px">
+
+    <span class="w3-jumbo w3-hide-small"><strong>HOPE </strong>is the catalyst to recovery.</span><br>
+
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium">HOPE is the catalyst to recovery.</span><br>
+
+    <!--<span class="w3-large">“Believe you can and you’re halfway there.”</span>-->
+
+    <!--<p><a href="#" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off"><i class="fa fa-th"> </i> ASSESS YOURSELF</a></p>-->
+<% if (!currentUser) { %>  
+    <div align="right">
+
+    	<p id="logs"><a href="/login" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off "><i style='font-size:24px' class='fas'>&#xf2f6;</i> LOGIN</a></p>
+
+    	<p id="logs"><a href="/signIn" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off"><i style='font-size:24px' class='fas'>&#xf2f5;</i> SIGN UP</a></p>
+
+  	</div>
+<% } %>
+  </div> 
+
+  
+
+</header>
+
+
+
+<!-- rehab centres Section -->
+
+<div class="w3-container" style="padding:128px 16px" id="about">
+
+  <h2 class="w3-center">FEATURED RETINOPATHY TREATMENT PROCEDURES</h2>
+
+  
+
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+
+    <div class="w3-quarter">
+
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTbFIsyShO866Jv01l7UceFW0fRtrS0dKbrdTXjBLNth8R9B3Pk" alt="" height="250px" width="250px" style="border-radius:25px;">
+
+      <p class="w3-large"> <strong>Retina Scans</strong></p>
+
+      <p style="text-align:justify"> A retinal scan is a biometric technique that uses unique patterns on a person's retina blood vessels. It is not to be confused with other ocular-based technologies: iris recognition, commonly called an "iris scan", and eye vein verification that uses scleral veins. The human retina is a thin tissue made up of neural cells that is located in the posterior portion of the eye. Because of the complex structure of the capillaries that supply the retina with blood, each person's retina is unique. </p>
+
+    </div>
+
+    <div class="w3-quarter">
+
+      <img src="https://drmohans.com/wp-content/uploads/2018/04/Eye-care-new2.jpg" alt="" height="250px" width="250px" style="border-radius:25px;">
+
+      <p class="w3-large"> <strong>Regular Opthalmologist Visits</strong></p>
+
+      <p style="text-align:justify"> Don’t skip your annual eye doctor visit because you think you can see just  fine. Eye exams aren’t only for people with poor vision. They're an important way to find eye problems before symptoms show up. Your eye doctor can also catch other problems, like diabetes, early on. If it's been more than a few years since your last visit, or if you've never had one, it’s time get one on the calendar now.Work with your diabetes doctor (endocrinologist) to determine if there are ways to improve your diabetes management. When diabetic retinopathy is mild or moderate, good blood sugar control can usually slow the progression.</p>
+
+    </div>
+
+    <div class="w3-quarter">
+
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRercfr-vd3Lt1W2d-34agj90BY2BoMqMuZ6N1TxhKvvdRmaGta" alt="" height="250px" width="250px" style="border-radius:25px;">
+
+      <p class="w3-large"> <strong>Scatter Laser Surgery</strong></p>
+
+      <p style="text-align:justify">Scatter laser surgery (sometimes called panretinal photocoagulation) can help treat advanced cases of diabetic retinopathy. Your doctor will use lasers to shrink blood vessels in your eye that are causing vision problems.During the treatment, you may see flashes of light and your eye may sting or feel uncomfortable. Your vision will be blurry for the rest of the day, so you’ll need someone to drive you home. You may need more than 1 session of scatter laser surgery. </p>
+
+    </div>
+
+    <div class="w3-quarter">
+
+      <img src="https://drmohans.com/wp-content/uploads/2018/04/Eye-care-new3.jpg" alt="" height="250px" width="250px" style="border-radius:25px;">
+
+      <p class="w3-large"> <strong>Fundus Fluorescein Angiography (FFA) & Optical Coherence Tomography (OCT):</strong></p>
+
+      <p style="text-align:justify">Fundus Fluorescein Angiography (FFA) is a procedure which involves intravenous injection of a dye in the arm and then taking rapid sequence photographs of the retina. This helps the ophthalmologist to have a complete assessment of the changes in the retina and pinpoint the specific areas in the retina which are diseased.
+          Optical Coherence Tomography (OCT) is a non-contact non-invasive retinal imaging technique, using infrared light to visualize the biological tissues/ layers of the retina.</p>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<!-- Promo Section - "We provide info" -->
+
+<div class="w3-container w3-light-grey" style="padding:128px 16px">
+
+  <div class="w3-row-padding">
+
+    <div class="w3-col m6">
+
+      <h3>We provide information, resources, and treatment suggestions for people suffering from Diabetic Retinopathy</h3>
+
+      <p>Our mission is to equip patients and families with the best information, resources and tools to overcome retinopathy and pursue lifelong recovery or prevent further damage. We are here to help you or your loved one every step of the way.</p>
+
+      <p><a href="/userprofile" class="w3-button w3-black"><i style='font-size:24px' class='fas'>&#xf95c;</i> ASSESS YOURSELF</a></p>
+
+    </div>
+
+    <div align="right" class="w3-col m6">
+
+      <img class="w3-image w3-round-large" src="https://bhll.info/wp-content/uploads/2018/10/Diabetic-Retinopathy-Stages-Symptoms-and-Treatment-Options.jpg" alt="Broken Image" width="500" height="300">
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<!-- recovery section Section -->
+
+<div class="w3-container" style="padding:128px 16px" id="team">
+
+  <h3 class="w3-center">RECOVERY EXPERIENCES</h3>
+
+  <p class="w3-center w3-large">"We must accept finite disappointment, but never lose infinite hope."</p>
+
+  <div class="w3-row-padding" style="margin-top:64px">
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+
+      <div class="w3-card"> 
+
+        <img src="https://cdn1.medicalnewstoday.com/content/images/articles/320/320137/smiling-middle-aged-woman.jpg" height="250px" alt="broken" style="width:100%">
+
+        <div class="w3-container">
+
+          <h3>Susan Baker</h3>
+
+          <p class="w3-opacity">Susan Baker shares her treatment experience</p>
+
+          <p><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> View</button></p>
+
+          
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+
+      <div class="w3-card">
+
+        <img src="https://i2.wp.com/boldblindbeauty.com/wp-content/uploads/2017/03/img_5662-e1490215487189.png?resize=416%2C410&ssl=1" height="250px" alt="broken" style="width:100%">
+
+        <div class="w3-container">
+
+          <h3>Nicol Turner</h3>
+
+          <p class="w3-opacity">Nicol shares her story of how she was shocked with the symptoms</p>
+
+          <p><button onclick="document.getElementById('id02').style.display='block'" class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> View</button></p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+
+      <div class="w3-card">
+
+        <img src="https://static.diabetesaustralia.com.au/s/images/diabetes-australia/0ca5cd0c-90fb-42ad-ac77-8fbfb408d233.png?w=1200" height="250px" alt="broken" style="width:100%">
+
+        <div class="w3-container">
+
+          <h3>Ian Westman</h3>
+
+          <p class="w3-opacity">Former bank manager, living with type 2 diabetes</p>
+
+          <p><button onclick="document.getElementById('id03').style.display='block'" class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> View</button></p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+
+      <div class="w3-card">
+
+        <img src="https://static.diabetesaustralia.com.au/s/images/diabetes-australia/701969e6-e12f-4a67-a949-41522748a8c7.jpg?crop=(0,41.6,336,401.6)&w=1200" height="250px" alt="broken" style="width:100%;">
+
+        <div class="w3-container">
+
+          <h3>Donna Fehlauer</h3>
+
+          <p class="w3-opacity">Author of Life by the Clock – Living with Diabetes</p>
+
+          <p><button onclick="document.getElementById('id04').style.display='block'" class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> View</button></p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+ </div>
+
+
+
+<!--modal content-->
+
+<div id="id01" class="w3-modal">
+
+  <div class="w3-modal-content w3-card-4">
+
+    <header class="w3-container w3-teal"> 
+
+      <span onclick="document.getElementById('id01').style.display='none'" 
+
+      class="w3-button w3-display-topright">&times;</span>
+
+      <h2>Susan Baker</h2>
+
+    </header>
+
+    <div class="w3-container">
+
+      <p>&emsp; Still holding 20/20 vision in both eyes. Still lots of floaters and still of a little bit of blood left in the right eye. The only visual loss I notice is in my right eye there seems to be some sort of scotoma that's very tiny and can only notice with the left eye closed. Another thing that I've noticed is that on some days I'll get a spot in my vision that is very bright when I blink and acts as a small blind spot. It does go away but takes anywhere from a day to a week. I've also paid so much attention to my vision, that I've started noticing scheerer's phenomenon. It's harmless but annoying as hell. The doctor's tell me that there are no new blood vessels growing and that I have just some minor leakage in both eyes that will certainly get better over time. It's still hard to carry on life as normal everyday because it's the first thing I think about when I wake up, and the last thing I think about before I go to sleep. I thank god everyday that I wake up and can still see. I attribute most of my success to getting my A1C's in control (highest since March was a 6.5, sticking around a 6 now) and not settling for a mediocre doctor. I do vision tests every morning just to make sure nothing serious is going on.
+
+So I hope someone out there finds my story helpful. I encourage others to post their experiences as well. When researching this disease I found it more helpful to read about other people's experiences than reading statistics. If it makes anyone feel better, I came right out and asked my retina specialist "Am I going to wake up one morning and POOF, darkness?" He laughed and said "No way. The people that usually go blind from this are the ones that wait way too long to get it treated or the ones that don't take care of themselves at all."
+
+If anyone has any questions or has anything to add, please post and don't be shy!</p>
+
+    </div>
+
+    
+
+  </div>
+
+</div>
+
+
+
+<div id="id02" class="w3-modal">
+
+  <div class="w3-modal-content w3-card-4">
+
+    <header class="w3-container w3-teal"> 
+
+      <span onclick="document.getElementById('id02').style.display='none'" 
+
+      class="w3-button w3-display-topright">&times;</span>
+
+      <h2>Nicol</h2>
+
+    </header>
+
+    <div class="w3-container">
+
+      <p>&emsp; The surgery was successful. I recovered in three and a half weeks and was told it takes a lot of people 6-8 weeks to recover from this type of surgery—a vitrectomy. I watched a lot of tv during my recovery process. I could see what I called “black water in the bottom of my eye.” It was as if someone filled me up with water. It moved back and forth when I moved my head. Finally, it went away. My vision was more clear! That blob that blocked my central vision was gone. I had a black eye which seemed to last forever. So the vitrectomy did what it needed to do. It got the blood out of my eye. If I need eye surgery in the future I will use the same surgeon again. I know he has a steady hand and is a gifted surgeon. I didn’t need to like his personality for him to do a phenomenal job. 
+
+Later my diagnosis was changed from severe diabetic retinopathy to severe proliferative diabetic retinopathy. I can no longer read with just my left eye. Letters look wavy as if they are moving. There is a lot of blur and when I see a person’s face it looks like pieces are missing. I can make out eyes and a mouth but other features are too blurry to make out. This damage can’t be fixed. I depend on my right eye a lot and it overcompensates for me.”</p>
+
+    </div>
+
+    
+
+  </div>
+
+</div>
+
+<div id="id03" class="w3-modal">
+
+  <div class="w3-modal-content w3-card-4">
+
+    <header class="w3-container w3-teal"> 
+
+      <span onclick="document.getElementById('id03').style.display='none'" 
+
+      class="w3-button w3-display-topright">&times;</span>
+
+      <h2>Ian Westman</h2>
+
+    </header>
+
+    <div class="w3-container">
+
+      <p>&emsp;Ian Westman was watching a game of footy with one of his mates when the two blokes started talking about their health. “My friend was curious if my diabetes had already gone away,” laughs Ian who of course knows that he will live with type 2 diabetes for the rest of his life. There is no cure for diabetes.
+
+The former bank manager from Oakleigh was 38-years young when he learned of his diagnosis. Although being a young and very active person, Ian was aware of his high risk of developing type 2 diabetes as it runs in his family. “It was a bit of time-bomb,” says Ian. His mum was keen to have him tested after he lost a lot of weight and was generally exhausted. “I wasn’t looking after myself as good as I could have at that time.”
+
+Since his diagnosis in 1994, Ian has changed his diet and is very mindful of what he is eating. “I have cut the soft drinks altogether,” says Ian who loves walking his two dogs and aims to walk 10,000 steps every day. The main treatment for type 2 diabetes is healthy eating and regular physical activity. Next to making appropriate lifestyle changes, taking oral medications or administering insulin are important options in the management of type 2 diabetes.
+
+“I feel that many people do not understand diabetes,” says Ian. “Especially the differences between type 1 and type 2 are not generally known or, in my case, that some people with type 2 are required to administer insulin too.” Ian is one of over 236,000 Australians (23%) who need insulin to manage their type 2 diabetes. He currently has two injections every day.
+
+</p>
+
+      
+
+    </div>
+
+    
+
+  </div>
+
+</div>
+
+<div id="id04" class="w3-modal">
+
+  <div class="w3-modal-content w3-card-4">
+
+    <header class="w3-container w3-teal"> 
+
+      <span onclick="document.getElementById('id04').style.display='none'" 
+
+      class="w3-button w3-display-topright">&times;</span>
+
+      <h2>Donna Fehlauer</h2>
+
+    </header>
+
+    <div class="w3-container">
+
+      <p>&emsp; I was diagnosed with diabetes at the age of 10 years old but had undiagnosed diabetes from the age of 7 years old. Like all people with type 1 diabetes, my life is ruled by the clock – with meals, blood tests, insulin injections, and rest – all on a strict regime dictated by my diabetes. When I decided to write a book on life with diabetes, 'Life by the Clock' seemed like an obvious title!
+
+Lyn Wiegmans author of Life by the Clock – Living with Diabetes 
+The presentation of my Kellion medal by Dr Stocks in 2003 would have to be one of the highlights of my living with this disease since 1953. There were five other recipients, ranging in age from 53 years to 85 years. But the really interesting thing was that they were – WE were – ALL ‘characters’ of their own. Each one had his or her story to tell, and we all came from very different backgrounds and walks of life; but we all had in common, a certain steely determination; a capacity for laughing at ourselves and the ridiculous situations this rotten disease has put us in, from time to time; and a bloody-minded, bulldog tenacity. We all had that. I think it’s probably essential if you’re going to live to a fulfilled and ripe old age with diabetes!
+
+Email: lifebytheclock@optusnet.com.au for a copy of 'Life by the Clock – Living with Diabetes' or order from Diabetes Australia Queensland.</p>
+
+      
+
+    </div>
+
+    
+
+  </div>
+
+</div>
+
+
+
+<script>
+
+// Get the modal
+
+var modal1 = document.getElementById('id01');
+
+var modal2 = document.getElementById('id02');
+
+var modal3 = document.getElementById('id03');
+
+var modal4 = document.getElementById('id04');
+
+// When the user clicks anywhere outside of the modal, close it
+
+window.onclick = function(event) {
+
+    if (event.target == (modal1 || modal2 || modal3 || modal4) {
+
+        modal.style.display = "none";
+
+    }
+
+
+
+}
+
+</script>  
+
+
+
+
+
+<!-- Promo Section "Statistics" -->
+
+<div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
+
+  <div class="w3-quarter">
+
+    <span class="w3-xxlarge">14+</span>
+
+    <br>Active Cities
+
+  </div>
+
+  <div class="w3-quarter">
+
+    <span class="w3-xxlarge">30+</span>
+
+    <br>Doctors
+
+  </div>
+
+  <div class="w3-quarter">
+
+    <span class="w3-xxlarge">89+</span>
+
+    <br>Happy Clients
+
+  </div>
+
+  <div class="w3-quarter">
+
+    <span class="w3-xxlarge">10+</span>
+
+    <br>Treatment Centres
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+<!-- Contact Section -->
+
+<!--<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">-->
+
+<!--  <h3 class="w3-center">CONTACT</h3>-->
+
+<!--  <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>-->
+
+<!--  <div class="w3-row-padding" style="margin-top:64px">-->
+
+<!--    <div class="w3-half">-->
+
+<!--      <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Mumbai, India</p>-->
+
+<!--      <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +91 9838239773</p>-->
+
+<!--      <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>-->
+
+<!--      <br>-->
+
+<!--      <form action="/home"  method="POST">-->
+
+<!--        <p><input class="w3-input w3-border" type="text" placeholder="Name" name="Name" required></p>-->
+
+<!--        <p><input class="w3-input w3-border" type="text" placeholder="Email" name="Email" required></p>-->
+
+<!--        <p><input class="w3-input w3-border" type="text" placeholder="Subject" name="Subject" required></p>-->
+
+<!--        <p><input class="w3-input w3-border" type="text" placeholder="Message" name="Message" required></p>-->
+
+<!--        <p>-->
+
+<!--          <button class="w3-button w3-black" type="submit">-->
+
+<!--            <i class="fa fa-paper-plane"></i> SEND MESSAGE-->
+
+<!--          </button>-->
+
+<!--        </p>-->
+
+<!--      </form>-->
+
+<!--    </div>-->
+
+<!--    <div class="w3-half">-->
+
+      <!-- Add Google Maps -->
+
+<!--      <div id="googleMap" class="w3-greyscale-max" style="width:100%;height:510px;"></div>-->
+
+<!--    </div>-->
+
+<!--  </div>-->
+
+<!--</div>-->
+
+
+
+
+ 
+
+<!-- Add Google Maps -->
+
+
+<!--<script>-->
+
+<!--function myMap()-->
+
+<!--{-->
+
+<!--  myCenter=new google.maps.LatLng(19.0760, 72.8777);-->
+
+<!--  var mapOptions= {-->
+
+<!--    center:myCenter,-->
+
+<!--    zoom:12, scrollwheel: false, draggable: false,-->
+
+<!--    mapTypeId:google.maps.MapTypeId.ROADMAP-->
+
+<!--  };-->
+
+<!--  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);-->
+
+
+
+<!--  var marker = new google.maps.Marker({-->
+
+<!--    position: myCenter,-->
+
+<!--  });-->
+
+<!--  marker.setMap(map);-->
+
+<!--}-->
+
+
+
+<!--// Modal Image Gallery-->
+
+<!--function onClick(element) {Modal-->
+
+<!--  document.getElementById("img01").src = element.src;-->
+
+<!--  document.getElementById("modal01").style.display = "block";-->
+
+<!--  var captionText = document.getElementById("caption");-->
+
+<!--  captionText.innerHTML = element.alt;-->
+
+<!--}-->
+
+
+
+
+
+<!--// Toggle between showing and hiding the sidebar when clicking the menu icon-->
+
+<!--var mySidebar = document.getElementById("mySidebar");-->
+
+
+
+<!--function w3_open() {-->
+
+<!--    if (mySidebar.style.display === 'block') {-->
+
+<!--        mySidebar.style.display = 'none';-->
+
+<!--    } else {-->
+
+<!--        mySidebar.style.display = 'block';-->
+
+<!--    }-->
+
+<!--}-->
+
+
+
+<!--// Close the sidebar with the close button-->
+
+<!--function w3_close() {-->
+
+<!--    mySidebar.style.display = "none";-->
+
+<!--}-->
+
+<!--</script>-->
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXuMMp1Z5XGHDi_cfbNrtgSQ_1XtkZZLQ&callback=myMap"></script>
+
+
+
+<% include partials/footer %>
+

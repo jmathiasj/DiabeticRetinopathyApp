@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<title>RetinoDoc</title>
+<link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.11.7"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!--userprofile.ejs-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.11.7"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.11.7"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+
+div.des{
+margin-top: 0px;
+margin-bottom: 0px;
+text-align: left;
+}
+div.well{
+  margin-left:152px;
+  margin-right:30px;
+  margin-top: 20px;
+}
+  body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+    
+    body, html {
+        height: 100%;
+        color: #777;
+        line-height: 1.8;
+    
+    }
+    /* Create a Parallax Effect */
+    .bgimg-6{
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .portfolio{
+      margin: auto;
+    }
+    .title {
+      color: grey;
+      font-size: 18px;
+    }
+    
+    button {
+      border: none;
+      outline: 0;
+      display: inline-block;
+      padding: 8px;
+      color: white;
+      background-color: #000;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+      font-size: 18px;
+    }
+    
+    a {
+      text-decoration: none;
+      font-size: 22px;
+      color: black;
+    }
+    
+    .bgimg-6{
+        background-image: url("https://www.aucelloeyecarecenter.com/wp-content/uploads/2016/02/imag4.jpg");
+        min-height: 100px;
+    }
+    .w3-wide {letter-spacing: 10px;}
+    .w3-hover-opacity {cursor: pointer;}
+</style>
+</head>
+<body>
+ <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-large"
+  onclick="w3_close()">CLOSE &times;</button>
+  <a href="/home/<%= currentUser.id %>" class="w3-bar-item w3-button">About Me <span class="glyphicon glyphicon-user"></span></a>
+  <a href="/home/<%= currentUser.id %>/trial" class="w3-bar-item w3-button">Take Test <span class="glyphicon glyphicon-edit"></span></a>
+  <a href="/userprofile/<%= currentUser.id %>" class="w3-bar-item w3-button">View Report <span class="glyphicon glyphicon-file"></span></a>
+      <a href="/viewRehab"class="w3-bar-item w3-button">Treatment Centre <i class='fas fa-hospital-alt' style='font-size:24px'></i></a>
+  <a href="/viewdoctor"class="w3-bar-item w3-button">Consult Doctor <i class='fas fa-user-md' style='font-size:24px'></i></a>
+</div>
+<div class="w3-top">
+
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <button id="openNav" style="width:50px" class="w3-bar-item w3-button w3-black w3-xlarge" onclick="w3_open()">&#9776;</button>
+    <a href="/" class="w3-bar-item w3-button w3-wide"><img src="../images/favicon.ico" class="ico" style="width:25px;height:25px;"><strong> RetinoDoc</strong></a>
+    
+    <div class="w3-right w3-hide-small">
+        
+            <div class="w3-dropdown-hover">
+                <a href="#" class="w3-button w3-white"><span class="glyphicon glyphicon-th"></span> Menu </a>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="/addict" class="w3-bar-item w3-button">Symptoms and Causes</a>
+                    <!--<a href="/treatment" class="w3-bar-item w3-button">Treatment</a>-->
+                    <a href="/aboutUs" class="w3-bar-item w3-button">About Us</a>
+                    <% if (!currentUser) { %>   
+                    <a href="/login" class="w3-bar-item w3-button">Login for profile</a>
+            
+                     <% } else { %>
+                    <a href="/home/<%= currentUser.id %>" class="w3-bar-item w3-button">View Profile of <%= currentUser.username %> </a>
+             
+                    <% } %>
+                    
+                </div>
+            </div>
+            <% if (!currentUser) { %>   
+                <a href="/login" class="w3-bar-item w3-button"> Login</a>
+            
+                <a href="/signIn" class="w3-bar-item w3-button"><i class="fa fa-user"></i> Sign Up</a>
+            <% } else { %>
+                <a href="#" class="w3-bar-item w3-button"><i style='font-size:24px' class='fas'>&#xf2bd;</i> Logged In As <%= currentUser.username %> </a>
+                <a href="/logout" class="w3-bar-item w3-button"><span class="glyphicon glyphicon-off"></span> Logout </a>
+            <% } %>
+    </div>
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open1()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none; opacity:0.8" id="mySidebar1">
+
+  <a href="javascript:void(0)" onclick="w3_close1()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+
+            <div class="w3-dropdown-hover">
+                <a class="w3-button"><span class="glyphicon glyphicon-th"></span> Menu</a>
+               <div class="w3-dropdown-content w3-bar-block w3-black w3-card-4">
+                    <a href="/addict" class="w3-bar-item w3-button">Symptoms and Causes</a>
+                    <a href="/aboutUs" class="w3-bar-item w3-button">About Us</a>
+                     <% if (!currentUser) { %>   
+                    <a href="/login" class="w3-bar-item w3-button">Login for profile</a>
+            
+                     <% } else { %>
+                    <a href="/home/<%= currentUser.id %>" class="w3-bar-item w3-button">View Profile of <%= currentUser.username %> </a>
+             
+                    <% } %>
+                </div>
+            </div>  
+     <% if (!currentUser) { %>   
+                <a href="/login" class="w3-bar-item w3-button"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+            
+                <a href="/signIn" class="w3-bar-item w3-button"><i class="fa fa-user-plus" style="font-size:20px"></i> Sign Up</a>
+            <% } else { %>
+                <a href="#" class="w3-bar-item w3-button"><i style='font-size:24px' class='fas'>&#xf2bd;</i> Logged In As <%= currentUser.username %> </a>
+                <a href="/logout" class="w3-bar-item w3-button"><span class="glyphicon glyphicon-off"></span> Logout </a>
+            <% } %>
+</nav>
+
+<script>
+    var mySidebar1 = document.getElementById("mySidebar1");
+
+function w3_open1() {
+    if (mySidebar1.style.display === 'block') {
+        mySidebar1.style.display = 'none';
+    } else {
+        mySidebar1.style.display = 'block';
+    }
+}
+
+// Close the sidebar with the close button
+function w3_close1() {
+    mySidebar1.style.display = "none";
+}
+</script>
+<!--<include partials/sideb %> -->
+<br  id="home">
+<br>
+<div id="main">
+    <div class="container-fluid p-3 my-3 border">
+       
+        <div class="card bg-dark text-white">
+            <div class="card-body">
+                <div class="card bg-light text-dark">
+                    <div class="card-body">
+                            <h2 align="center"><i class='fas fa-notes-medical' style='font-size:24px'></i> REPORT</h2>
+                            <p>
+                                <h4><i style='font-size:20px' class="material-icons">&#xe150;</i> Name : <%=currentUser.name%></h4>
+                                <h4><i style='font-size:20px' class='fas'>&#xf095;</i> Number : <%=currentUser.number%></h4>
+                                <h4><i style='font-size:20px' class='fas'>&#xf674;</i> Email : <%=currentUser.email%></h4>
+                            </p>
+                            <div class="container">
+                                <center><span class="badge badge-pill badge-secondary"><p><center><i style='font-size:16px' class='fas'>&#xf0a7;</i> <b>Scroll down to check your Latest Report</b></center></p></span></center>
+                            </div>
+                              
+                    </div>
+                </div>
+                <br>
+                <% user.result.forEach(function(resu){ %>
+                 <div class="card bg-light text-dark">
+                    <div class="card-body">
+                    <strong><span class="glyphicon">&#xe023;</span> Check your report generated on: <%= resu.datet %> </strong><br>
+                    
+                    <span class="pull-right"><center><a href="/report/<%= resu._id %>"  class="btn btn-primary"><i class='fas fa-info-circle'></i> More Info</a></center></span>
+                   
+                    
+              
+            
+                    </div>
+                    <% }) %>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+
+ <footer class="w3-center w3-black w3-padding-32">
+    
+ <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+ <p>Powered by <a href="http://www.frcrce.ac.in/" title="W3.CSS" target="_blank" class="w3-hover-text-green">Agnelites</a></p>
+    
+ </footer>
+
+</div>  
+<script>
+
+function w3_open() {
+  document.getElementById("main").style.marginLeft = "25%";
+  document.getElementById("mySidebar").style.width = "25%";
+  document.getElementById("mySidebar").style.paddingTop = "10%";
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("openNav").style.display = 'none';
+}
+function w3_close() {
+  document.getElementById("main").style.marginLeft = "0%";
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("openNav").style.display = "inline-block";
+}
+</script>
+</body>
+</html>    

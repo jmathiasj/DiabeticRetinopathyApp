@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html>
+
+<title>RetinoDoc</title>
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">-->
+
+<!--<link rel="stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/aboutUs.css">
+<link rel="stylesheet" href="css/home.css">
+
+<!--userprofile.ejs-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--<link rel="stylesheet" href="css/login.css">-->
+<!--<link rel="stylesheet" href="css/userprofile.css">-->
+<!--<link rel="stylesheet" href="/css/sidebar.css" type="text/css">-->
+<!--<script type="text/javascript" src="/js/sidebar.js" ></script>-->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.11.7"></script>
+<!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">-->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<!------ Include the above in your HEAD tag ---------->
+<body>
+    
+    <!-- Navbar (sit on top) -->
+
+<div class="w3-top">
+
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <!--<a href="/" class="w3-bar-item w3-button w3-wide"><span class="glyphicon glyphicon-eye-open"></span><strong> RetinoDoc</strong></a>-->
+<a href="/" class="w3-bar-item w3-button w3-wide"><img src="images/favicon.ico" class="ico" style="width:25px;height:25px;"><strong> RetinoDoc</strong></a>
+    <div class="w3-right w3-hide-small">
+        
+            <div class="w3-dropdown-hover">
+                <a href="#" class="w3-button w3-white"><span class="glyphicon glyphicon-th"></span> Menu</a>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="/addict" class="w3-bar-item w3-button">Symptoms and Causes</a>
+                    <!--<a href="/treatment" class="w3-bar-item w3-button">Treatment</a>-->
+                    <a href="/aboutUs" class="w3-bar-item w3-button">About Us</a>
+                    <% if (!currentUser) { %>   
+                    <a href="/login" class="w3-bar-item w3-button">Login for profile</a>
+            
+                     <% } else { %>
+                    <a href="/home/<%= currentUser.id %>" class="w3-bar-item w3-button">View Profile of <%= currentUser.username %> </a>
+             
+                    <% } %>
+                    <!--<a href="/#contact" class="w3-bar-item w3-button">CONTACT US</a>-->
+                </div>
+            </div>
+            <% if (!currentUser) { %>   
+                <a href="/login" class="w3-bar-item w3-button"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+            
+                <a href="/signIn" class="w3-bar-item w3-button"><i class="fa fa-user-plus" style="font-size:20px"></i> Sign Up</a>
+            <% } else { %>
+                <a href="#" class="w3-bar-item w3-button"><i style='font-size:24px' class='fas'>&#xf2bd;</i> Logged In As <%= currentUser.username %> </a>
+                <a href="/logout" class="w3-bar-item w3-button"><span class="glyphicon glyphicon-off"></span> Logout </a>
+            <% } %>
+    </div>
+
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+
+      <i class="fa fa-bars"></i>
+
+    </a>
+
+  </div>
+
+</div>
+
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none; opacity:0.8" id="mySidebar">
+
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+
+            <div class="w3-dropdown-hover">
+                <a class="w3-button"><span class="glyphicon glyphicon-th"></span> Menu</a>
+               <div class="w3-dropdown-content w3-bar-block w3-black w3-card-4">
+                    <a href="/addict" class="w3-bar-item w3-button">Symptoms and Causes</a>
+                    <a href="/aboutUs" class="w3-bar-item w3-button">About Us</a>
+                     <% if (!currentUser) { %>   
+                    <a href="/login" class="w3-bar-item w3-button">Login for profile</a>
+            
+                     <% } else { %>
+                    <a href="/home/<%= currentUser.id %>" class="w3-bar-item w3-button">View Profile of <%= currentUser.username %> </a>
+             
+                    <% } %>
+                </div>
+            </div>  
+     <% if (!currentUser) { %>   
+                <a href="/login" class="w3-bar-item w3-button"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+            
+                <a href="/signIn" class="w3-bar-item w3-button"><i class="fa fa-user-plus" style="font-size:20px"></i> Sign Up</a>
+            <% } else { %>
+                <a href="#" class="w3-bar-item w3-button"><i style='font-size:24px' class='fas'>&#xf2bd;</i> Logged In As <%= currentUser.username %> </a>
+                <a href="/logout" class="w3-bar-item w3-button"><span class="glyphicon glyphicon-off"></span> Logout </a>
+            <% } %>
+</nav>
+
+<script>
+    var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+    } else {
+        mySidebar.style.display = 'block';
+    }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>

@@ -1,0 +1,32 @@
+ 
+ <form action="/reset" method="POST">
+ <label for="password">
+        Password</label>
+    <input name="password" style="width:450px; height:50px;"type="password" id="txtPassword" title="Password must contain: Minimum 8 characters atleast 1 Alphabet and 1 Number"
+        class="form-control" placeholder="Enter Password" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" />
+    <br />
+    <label for="txtConfirmPassword" style="padding-right:275px">
+        Confirm Password</label>
+    <input name="txtConfirmPassword" style="width:450px; height:50px;" type="password" id="txtConfirmPassword" class="form-control"
+        placeholder="Confirm Password" />
+    <br />
+    <button type="submit">Submit</button>
+    
+</form>
+
+<script type="text/javascript">
+    window.onload = function () {
+        var txtPassword = document.getElementById("txtPassword");
+        var txtConfirmPassword = document.getElementById("txtConfirmPassword");
+        txtPassword.onchange = ConfirmPassword;
+        txtConfirmPassword.onkeyup = ConfirmPassword;
+        function ConfirmPassword() {
+            txtConfirmPassword.setCustomValidity("");
+            if (txtPassword.value != txtConfirmPassword.value) {
+                txtConfirmPassword.setCustomValidity("Passwords do not match.");
+            }
+        }
+    }
+</script>
+                                                   
+                   
