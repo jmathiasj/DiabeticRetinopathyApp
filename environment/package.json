@@ -7,7 +7,7 @@
     "base-64": "^0.1.0",
     "bootstrap": "^4.4.1",
     "bower-json": "^0.8.1",
-    "chart.js": "^2.7.2",
+    "chart.js": "^2.9.4",
     "compression": "^1.7.4",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
